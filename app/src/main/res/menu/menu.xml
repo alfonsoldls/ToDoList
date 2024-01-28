@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/mas"
+        android:title="@string/mas"
+        android:icon="@mipmap/add"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom"
+        />
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"
+        android:icon="@mipmap/logout"
+        android:iconTint="@color/black"
+        app:showAsAction="ifRoom"
+        tools:ignore="AlwaysShowAction" />
+</menu>
