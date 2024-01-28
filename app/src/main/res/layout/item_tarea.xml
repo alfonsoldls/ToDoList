@@ -44,5 +44,6 @@
         android:backgroundTint="#ffa500"
         app:layout_constraintEnd_toStartOf="@+id/buttonDone"
         app:layout_constraintTop_toTopOf="parent"
-        android:onClick="editarTarea"/>
+        android:onClick="actualizarTarea"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -155,6 +155,46 @@ public class MainActivity extends AppCompatActivity{
                     }
                 });
     }
+    public void actualizarTarea(View view){
+
+        Toast.makeText(MainActivity.this, "Edit", Toast.LENGTH_SHORT).show();
+
+        final EditText nuevaTarea = new EditText(this);
+        new AlertDialog.Builder(this)
+                .setTitle("Editar tarea")
+                .setMessage("¿Quieres editar la tarea?")
+                .setView(nuevaTarea)
+                .setPositiveButton("Editar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        View parent = (View) view.getParent();
+                        TextView tareaTextView = parent.findViewById(R.id.textViewTarea);
+                        String tarea = tareaTextView.getText().toString();
+                        int posicion = listaTareas.indexOf(tarea);
+                        DocumentReference tareaRef = db.collection("Tareas").document(listaIdTareas.get(posicion));
+
+                        // Set the "isCapital" field of the city 'DC'
+                        tareaRef
+                                .update("nombreTarea", nuevaTarea.getText().toString())
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+
+                                    }
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+
+                                    }
+                                });
+                    }
+
+                })
+                .setNegativeButton("Cancelar", null)
+                .show();
+        ;}
 
 }
+
 
