@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">To Do List</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="introduce_tu_email">Introduce tu Email</string>
+    <string name="introduce_tu_contrase_a">Introduce tu contraseña</string>
+    <string name="login">Login</string>
+    <string name="registrate_aqu">Registrate Aquí</string>
+    <string name="add">add</string>
+    <string name="logout">logout</string>
+    <string name="lista_de_tareas">Lista de tareas</string>
+    <string name="hola">Hola</string>
+    <string name="todolist">ToDoList</string>
+    <string name="icontodolist">iconToDoList</string>
+    <string name="todo">TODO</string>
+    <string name="logeate_aqu">Logeate aquí</string>
+</resources>
